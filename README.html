@@ -24,7 +24,7 @@
     </head>
     <body class="vscode-body vscode-light">
         <h1 id="readme">README</h1>
-<p>This simple app is composed by two 'pieces' (here in the same place, but is possible to deploy two different apps configurating the right urls in settings and envs).</p>
+<p>This simple app is composed by two 'pieces' (here in the same place in one straordinary and unique solution, but it's possible to deploy two different apps configurating the right urls in settings, envs and /api/views).</p>
 <p>Backend:</p>
 <ul>
 <li>(/api/) fetch data from NeoWS NASA and save it to a DB (dev: sqlite3, prod: postgresql) then serve this data trough a REST API. In this particular module lives the custom command (Api/management/commands/retrievedata.py) that retrieve the data from the NeoWS API and the specification for the execution of the cron job (api/cron.py)</li>
@@ -34,9 +34,32 @@
 <ul>
 <li>(/client/) react app builded with create-react-app. Used in dev with webpack useful utils and in prod, in this specific case, the frontend build is served by django.</li>
 </ul>
-<h2 id="configuration">Configuration</h2>
-<p>TODO</p>
-<h3 id="commands">Commands</h3>
+<h2 id="configuration-with-poetry-an-awesome-dependency-manager-for-python">Configuration (with Poetry, an awesome dependency manager for Python)</h2>
+<p>For a matter of time I'll write down only the setup with poetry,
+but a 'requirements.txt' is available in the root folder for every other depedency and environment manager to use.</p>
+<h3 id="django">Django</h3>
+<p>Follows a basic list of commands to run the project in a local
+env scenario. For deploy in production use <em>.prod</em> as argument of the DJANGO_MODULE_KEY in .env file.</p>
+<pre><code class="language-bash"><div>git <span class="hljs-built_in">clone</span> https://github.com/uglywizard/QuakeData.git
+<span class="hljs-built_in">cd</span> <span class="hljs-built_in">cd</span> QuakeData
+poetry shell
+poetry install
+<span class="hljs-comment"># (at this point update the .env file with the desired env choice at the DJANGO_MODULE_SETTINGS key and fill the other with all the necessary data, like SECRET_KEY)</span>
+<span class="hljs-built_in">source</span> .env (a)
+python manage.py migrate
+python manage.py runserver
+</div></code></pre>
+<h3 id="react">React</h3>
+<pre><code class="language-bash"><div>git <span class="hljs-built_in">clone</span> https://github.com/uglywizard/QuakeData.git
+<span class="hljs-built_in">cd</span> <span class="hljs-built_in">cd</span> QuakeData
+poetry shell
+poetry install
+<span class="hljs-comment"># (at this point update the .env file with the desired env choice at the DJANGO_MODULE_SETTINGS key and fill the other with all the necessary data, like SECRET_KEY)</span>
+<span class="hljs-built_in">source</span> .env (a)
+python manage.py migrate
+python manage.py runserver
+</div></code></pre>
+<h2 id="commands">Commands</h2>
 <ul>
 <li>To generate a new secret key: python <a href="http://manage.py">manage.py</a> shell -c 'from django.core.management import utils; print(utils.get_random_secret_key())'</li>
 <li>The custom command is callable as 'python <a href="http://manage.py">manage.py</a> retrievedata'</li>
