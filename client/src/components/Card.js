@@ -4,13 +4,13 @@ import Moment from "react-moment";
 const Card = ({ item, children }) => {
   if (!item) return <p>No object returned, sorry.</p>;
   return (
-    <div>
+    <div className='container'>
       <div>
-        <h1>{item.name}</h1>
+        <h4>{item.name}</h4>
       </div>
       <div>
         <p>
-          Next approach date:{" "}
+          <b>Next approach date: </b>{" "}
           <Moment format='Do MMMM YYYY (HH:mm)'>
             {item.close_approach_date}
           </Moment>

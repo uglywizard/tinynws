@@ -6,10 +6,16 @@ const List = ({ collection }) => {
   if (!collection || collection.length === 0)
     return <p>No objects returned, sorry</p>;
   return (
-    <ul>
+    <ul style={{ listStyleType: "none", margin: "0", padding: "0" }}>
       {collection.map((item) => {
         return (
-          <div key={item.id}>
+          <li
+            className={
+              item.is_potentially_hazardous
+                ? "container-paging-body-if-item-alert"
+                : "container-paging-body-item"
+            }
+            key={item.id}>
             <Link
               to={{
                 pathname: `/${item.id}/`,
@@ -21,7 +27,7 @@ const List = ({ collection }) => {
               }}>
               <Card item={item} />
             </Link>
-          </div>
+          </li>
         );
       })}
     </ul>

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import List from "../components/List";
 import Loader from "../components/Loader";
-import { Button } from "@material-ui/core";
 
 class Paginator extends Component {
   state = {
@@ -48,27 +47,33 @@ class Paginator extends Component {
 
     renderNumbers = pageNumbers.map((num) => {
       return (
-        <Button
+        <button
+          type='button'
           key={num}
           style={{ padding: "0.2em" }}
           onClick={() => this.fetchHttpRequestPage(num)}>
           {num}
-        </Button>
+        </button>
       );
     });
 
     return (
       <div className='container'>
-        <p>
-          <ListLoading
-            isLoading={this.state.is_loading}
-            collection={this.state.collection}
-          />
-        </p>
-        <div className='commandsContainer'>
-          <span onClick={() => this.fetchHttpRequestPage(1)}>&laquo;</span>
-          <span style={{ padding: "0.2em 0.2em" }}>{renderNumbers}</span>
+        <ListLoading
+          isLoading={this.state.is_loading}
+          collection={this.state.collection}
+        />
+        <div className='container-paging-controls'>
           <span
+            className='container-paging-controls-arrow'
+            onClick={() => this.fetchHttpRequestPage(1)}>
+            &laquo;
+          </span>
+          <span className='container-paging-controls-numbers'>
+            {renderNumbers}
+          </span>
+          <span
+            className='container-paging-controls-arrow'
             onClick={() => this.fetchHttpRequestPage(this.state.page_count)}>
             &raquo;
           </span>

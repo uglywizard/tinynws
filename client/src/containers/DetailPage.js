@@ -25,26 +25,30 @@ class DetailPage extends Component {
 
   render() {
     return (
-      <div>
+      <div class='container'>
         <Card item={this.state.item}>
           <p>
-            Estimated diameter: {this.state.item.estimated_diameter_min} -{" "}
-            {this.state.item.estimated_diameter_max}{" "}
+            <b>Estimated diameter:</b> {this.state.item.estimated_diameter_min}{" "}
+            - {this.state.item.estimated_diameter_max}{" "}
           </p>
-          <p>Relative velocity: {this.state.item.relative_velocity} km/h</p>
           <p>
-            Url:{" "}
+            <b>Relative velocity:</b> {this.state.item.relative_velocity} km/h
+          </p>
+          <p>
+            <b>Url:</b>{" "}
             <a href={this.state.item.nasa_jpl_url}>
               {this.state.item.nasa_jpl_url}
             </a>
           </p>
         </Card>
-        <Button
+        <button
+          className='button-back'
+          type='button'
           variant='contained'
           color='primary'
           onClick={() => this.state.goBack()}>
           Back
-        </Button>
+        </button>
       </div>
     );
   }
