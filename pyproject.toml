@@ -1,8 +1,7 @@
 [tool.poetry]
-name = "neo_dashboard"
+name = "tinynws"
 version = "0.1.0"
-description = "NeoWS NASA Api Dashboard Backend"
-authors = ["Ugly Wiz <uglywizard@protonmail.com>"]
+description = "NeoWS NASA API esotic backend"
 
 [tool.poetry.dependencies]
 python = "^3.8"

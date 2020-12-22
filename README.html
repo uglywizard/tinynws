@@ -35,9 +35,7 @@
 <ul>
 <li>(/client/) react app builded with create-react-app. Used in dev with webpack useful utils and in prod, in this specific case, the frontend build is served by django.</li>
 </ul>
-<h2 id="configuration-with-poetry-an-awesome-dependency-manager-for-python">Configuration (with Poetry, an awesome dependency manager for Python)</h2>
-<p>For a matter of time I'll write down only the setup with poetry,
-but a 'requirements.txt' is available in the root folder for every other depedency and environment manager to use.</p>
+<h2 id="configuration">Configuration</h2>
 <h3 id="react">React</h3>
 <p>In this scenario there is nothing to do with the frontend, it just works served by a view in django.</p>
 <pre><code class="language-bash"><div><span class="hljs-built_in">cd</span> /client
@@ -46,19 +44,31 @@ yarn install &amp;&amp; yarn build <span class="hljs-comment"># to refresh the d
 </div></code></pre>
 <h3 id="django">Django</h3>
 <p>Follows a basic list of commands to run the project in a local
-env scenario. For deploy in production use <em>.prod</em> as argument of the DJANGO_MODULE_KEY in .env file.</p>
-<pre><code class="language-bash"><div>git <span class="hljs-built_in">clone</span> https://github.com/uglywizard/QuakeData.git
-<span class="hljs-built_in">cd</span> <span class="hljs-built_in">cd</span> QuakeData
+env scenario. For deploy in production use <strong>.prod</strong> as argument of the DJANGO_MODULE_KEY in .env file.</p>
+<p><strong>Poetry</strong></p>
+<pre><code class="language-bash"><div>git <span class="hljs-built_in">clone</span> {placeholder}
+<span class="hljs-built_in">cd</span> tinynws-django-react
 poetry shell
 poetry install
 <span class="hljs-comment"># (at this point update the .env file with the desired env choice at the DJANGO_MODULE_SETTINGS key and fill the other with all the necessary data, like SECRET_KEY)</span>
-<span class="hljs-built_in">source</span> .env (a)
+<span class="hljs-built_in">source</span> .env
+python manage.py migrate
+python manage.py retrievedata
+python manage.py runserver
+</div></code></pre>
+<p><strong>Pip and virtualenv</strong></p>
+<pre><code class="language-bash"><div>virtualenv -p python venv
+<span class="hljs-built_in">source</span> venv/bin/activate
+git <span class="hljs-built_in">clone</span> {placeholder}
+<span class="hljs-built_in">cd</span> tinynws-django-react
+pip install -r requirements.txt
+<span class="hljs-built_in">source</span> .env
 python manage.py migrate
 python manage.py retrievedata
 python manage.py runserver
 </div></code></pre>
 <h3 id="missing-parts">Missing parts</h3>
-<p>Here and there is possible to find snippet of code not so well managed in case of errors, but everything works so far and there are few test to run to check that the important things work.</p>
+<p>Here and there is possible to find snippet of code not so well handled in case of errors, but everything works so far and there are few test to run to check that the important things work.</p>
 <h2 id="commands">Commands</h2>
 <ul>
 <li>To generate a new secret key in fancy cmd style: <code>python manage.py shell -c 'from django.core.management import utils; print(utils.get_random_secret_key())'</code></li>

@@ -13,10 +13,7 @@ This simple app is composed by two 'pieces' (here in the same place in one strao
 
 - (/client/) react app builded with create-react-app. Used in dev with webpack useful utils and in prod, in this specific case, the frontend build is served by django.
 
-## Configuration (with Poetry, an awesome dependency manager for Python)
-
-For a matter of time I'll write down only the setup with poetry,
-but a 'requirements.txt' is available in the root folder for every other depedency and environment manager to use.
+## Configuration
 
 ### React
 
@@ -31,15 +28,29 @@ cd ..
 ### Django
 
 Follows a basic list of commands to run the project in a local
-env scenario. For deploy in production use _.prod_ as argument of the DJANGO_MODULE_KEY in .env file.
+env scenario. For deploy in production use __.prod__ as argument of the DJANGO_MODULE_KEY in .env file.
 
+__Poetry__
 ```bash
-git clone https://github.com/uglywizard/QuakeData.git
-cd cd QuakeData
+git clone {placeholder}
+cd tinynws-django-react
 poetry shell
 poetry install
 # (at this point update the .env file with the desired env choice at the DJANGO_MODULE_SETTINGS key and fill the other with all the necessary data, like SECRET_KEY)
-source .env (a)
+source .env
+python manage.py migrate
+python manage.py retrievedata
+python manage.py runserver
+```
+
+__Pip and virtualenv__
+```bash
+virtualenv -p python venv
+source venv/bin/activate
+git clone {placeholder}
+cd tinynws-django-react
+pip install -r requirements.txt
+source .env
 python manage.py migrate
 python manage.py retrievedata
 python manage.py runserver
@@ -47,7 +58,7 @@ python manage.py runserver
 
 ### Missing parts
 
-Here and there is possible to find snippet of code not so well managed in case of errors, but everything works so far and there are few test to run to check that the important things work.
+Here and there is possible to find snippet of code not so well handled in case of errors, but everything works so far and there are few test to run to check that the important things work.
 
 ## Commands
 
