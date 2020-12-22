@@ -16,10 +16,10 @@ body {
     font-size: 1.8rem;
     line-height: 1.618;
     max-width: 38em;
-    margin: auto;
+    margin: 1em 4em 0em 6em;
     color: #4a4a4a;
     background-color: #f9f9f9;
-    padding: 13px;
+    padding: 4em;
 }
 
 @media (max-width: 684px) {
@@ -272,18 +272,20 @@ fieldset {
 }
 
 .container {
-    width: 70%;
     height: 12rem;
 }
 
-.pagination-nav-container {
+.container-paging-navigation {
     width: 40%;
     margin: auto;
     background-color: #1d7484;
     padding: 3em;
 }
 
-.p-center {
+.container-paging-body {
+    display: flex;
     margin: auto;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
