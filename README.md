@@ -16,6 +16,10 @@ This simple app is composed by two 'pieces' (here in the same place in one strao
 
 - (/client/) react app builded with create-react-app. Used in dev with webpack useful utils and in prod, in this specific case, the frontend build is served by django.
 
+## Live copy
+
+TinyNWS on Heroku: <https://tinynws.herokuapp.com/>
+
 ## Configuration
 
 ### React

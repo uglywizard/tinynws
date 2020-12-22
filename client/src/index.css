@@ -15,7 +15,7 @@ html {
 
 body {
     font-size: 1.8rem;
-    line-height: 1.618;
+    line-height: 1.2;
     max-width: 800px;
     width: 100%;
     margin: 0em 0em 0em 0em;
@@ -287,8 +287,8 @@ span {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: absolute;
     align-items: center;
+    width: 100%;
     padding: 0em;
     margin: 1.2em;
 }
@@ -322,7 +322,7 @@ span {
 .container-paging-body-item {
     margin: 0.2em;
     width: auto;
-    padding: 0.3em;
+    padding: 0.1em;
 }
 
 .container-paging-body-item:hover {
