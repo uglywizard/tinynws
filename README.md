@@ -71,7 +71,7 @@ Here and there is possible to find snippet of code not so well handled in case o
 
 ## Testing
 
-I've learned a tough lesson about tests: it's so awesome all the prior work necessary to write down code and efficient tests, but is known that doing interesting things makes time pass so fast.
+I've learned a tough lesson about tests: it's so awesome all the prior work necessary to write down code and efficient tests, but it's also known that doing interesting things makes time pass so much fast. :°(
 
 - Django test:
 
