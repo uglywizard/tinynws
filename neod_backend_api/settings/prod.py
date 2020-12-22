@@ -3,7 +3,7 @@ import django_heroku
 import dj_database_url
 
 ALLOWED_HOSTS = ["tinynws.herokuapp.com"]
-CORS_ALLOWRD_ORIGINS = ["*.herokuapp.com"]
+CORS_ALLOWED_ORIGINS = ["*.herokuapp.com"]
 
 DEBUG = False
 
