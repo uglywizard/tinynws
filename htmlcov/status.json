@@ -1,0 +1,159 @@
+{
+    "format": 2,
+    "version": "5.3.1",
+    "globals": "b68eff400d01d72f55931efc89fd652e",
+    "files": {
+        "api___init___py": {
+            "hash": "af9d0d0de0ea3b71d198bc63f1499a7d",
+            "index": {
+                "nums": [1, 0, 0, 0, 0, 0, 0],
+                "html_filename": "api___init___py.html",
+                "relative_filename": "api/__init__.py"
+            }
+        },
+        "api_admin_py": {
+            "hash": "31dd0ad3cb2e2e8d42463bc80463b69e",
+            "index": {
+                "nums": [1, 3, 0, 0, 0, 0, 0],
+                "html_filename": "api_admin_py.html",
+                "relative_filename": "api/admin.py"
+            }
+        },
+        "api_apps_py": {
+            "hash": "cbaefdc4df10b996159d7a92bc866333",
+            "index": {
+                "nums": [1, 3, 0, 3, 0, 0, 0],
+                "html_filename": "api_apps_py.html",
+                "relative_filename": "api/apps.py"
+            }
+        },
+        "api_management_commands_retrievedata_py": {
+            "hash": "3162908890236d31394c0cc4603dd61c",
+            "index": {
+                "nums": [1, 29, 0, 0, 0, 0, 0],
+                "html_filename": "api_management_commands_retrievedata_py.html",
+                "relative_filename": "api/management/commands/retrievedata.py"
+            }
+        },
+        "api_migrations_0001_initial_py": {
+            "hash": "88b6e072ecffd33bf5edcef7f8b1c2b7",
+            "index": {
+                "nums": [1, 5, 0, 0, 0, 0, 0],
+                "html_filename": "api_migrations_0001_initial_py.html",
+                "relative_filename": "api/migrations/0001_initial.py"
+            }
+        },
+        "api_migrations___init___py": {
+            "hash": "af9d0d0de0ea3b71d198bc63f1499a7d",
+            "index": {
+                "nums": [1, 0, 0, 0, 0, 0, 0],
+                "html_filename": "api_migrations___init___py.html",
+                "relative_filename": "api/migrations/__init__.py"
+            }
+        },
+        "api_models_py": {
+            "hash": "d12dc48c40f4271df283a331da050e45",
+            "index": {
+                "nums": [1, 14, 0, 0, 0, 0, 0],
+                "html_filename": "api_models_py.html",
+                "relative_filename": "api/models.py"
+            }
+        },
+        "api_paginations_py": {
+            "hash": "227fc414a8bc31739db863e37a486d38",
+            "index": {
+                "nums": [1, 7, 0, 0, 0, 0, 0],
+                "html_filename": "api_paginations_py.html",
+                "relative_filename": "api/paginations.py"
+            }
+        },
+        "api_serializers_py": {
+            "hash": "def5ce2ce349351184781b2947e5944f",
+            "index": {
+                "nums": [1, 10, 0, 0, 0, 0, 0],
+                "html_filename": "api_serializers_py.html",
+                "relative_filename": "api/serializers.py"
+            }
+        },
+        "api_tests_py": {
+            "hash": "4f86a28c698b6562c8aabf3be162f2cb",
+            "index": {
+                "nums": [1, 42, 0, 0, 0, 0, 0],
+                "html_filename": "api_tests_py.html",
+                "relative_filename": "api/tests.py"
+            }
+        },
+        "api_urls_py": {
+            "hash": "f1f103ad0f244df316f169d2b8ea8f72",
+            "index": {
+                "nums": [1, 3, 0, 0, 0, 0, 0],
+                "html_filename": "api_urls_py.html",
+                "relative_filename": "api/urls.py"
+            }
+        },
+        "api_utils_py": {
+            "hash": "5cecc5a2b51b4f61c6dcb90f83941b98",
+            "index": {
+                "nums": [1, 19, 0, 0, 0, 0, 0],
+                "html_filename": "api_utils_py.html",
+                "relative_filename": "api/utils.py"
+            }
+        },
+        "api_views_py": {
+            "hash": "25636255020fcf0ac35599a8a60e78bd",
+            "index": {
+                "nums": [1, 12, 0, 0, 0, 0, 0],
+                "html_filename": "api_views_py.html",
+                "relative_filename": "api/views.py"
+            }
+        },
+        "manage_py": {
+            "hash": "2ef51f46984c16e3818706e9636ad67b",
+            "index": {
+                "nums": [1, 12, 0, 2, 0, 0, 0],
+                "html_filename": "manage_py.html",
+                "relative_filename": "manage.py"
+            }
+        },
+        "neod_backend_api___init___py": {
+            "hash": "af9d0d0de0ea3b71d198bc63f1499a7d",
+            "index": {
+                "nums": [1, 0, 0, 0, 0, 0, 0],
+                "html_filename": "neod_backend_api___init___py.html",
+                "relative_filename": "neod_backend_api/__init__.py"
+            }
+        },
+        "neod_backend_api_asgi_py": {
+            "hash": "afbe6666f9bf17fb68584eb640e37758",
+            "index": {
+                "nums": [1, 4, 0, 4, 0, 0, 0],
+                "html_filename": "neod_backend_api_asgi_py.html",
+                "relative_filename": "neod_backend_api/asgi.py"
+            }
+        },
+        "neod_backend_api_settings_py": {
+            "hash": "d52bba992fccfbf68eac8fcd6b628c75",
+            "index": {
+                "nums": [1, 21, 0, 0, 0, 0, 0],
+                "html_filename": "neod_backend_api_settings_py.html",
+                "relative_filename": "neod_backend_api/settings.py"
+            }
+        },
+        "neod_backend_api_urls_py": {
+            "hash": "848567be6c71e0b048f95cc4899134f9",
+            "index": {
+                "nums": [1, 3, 0, 0, 0, 0, 0],
+                "html_filename": "neod_backend_api_urls_py.html",
+                "relative_filename": "neod_backend_api/urls.py"
+            }
+        },
+        "neod_backend_api_wsgi_py": {
+            "hash": "f4be91388d7668eaf235bc526f2fe2c2",
+            "index": {
+                "nums": [1, 4, 0, 4, 0, 0, 0],
+                "html_filename": "neod_backend_api_wsgi_py.html",
+                "relative_filename": "neod_backend_api/wsgi.py"
+            }
+        }
+    }
+}

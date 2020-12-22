@@ -1,0 +1,24 @@
+{
+    "name": "tinynws",
+    "version": "0.1.0",
+    "description": "React frontend app for TinyWS backend API.",
+    "main": "staticfiles/build/index.js",
+    "repository": "",
+    "author": "",
+    "license": "",
+    "private": true,
+    "scripts": {
+        "heroku-prebuild": "cd client/ && npm install && npm build && cd ..",
+        "start": "serve -s build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject"
+    },
+    "cacheDirectories": [
+        "frontend/node_modules"
+    ],
+    "engines": {
+        "node": "12.x",
+        "npm": "6.x"
+    },
+    "dependencies": {}
+}

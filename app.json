@@ -1,0 +1,45 @@
+{
+    "name": "TinyNeoWS",
+    "description": "Django app that filters and serve data trough REST API.",
+    "keywords": ["python", "django", "javascript", "react"],
+    "website": "https://tinynws.herokuapp.com",
+    "success_url": "/",
+    "scripts": {
+        "postdeploy": "python manage.py migrate",
+        "heroku-prebuild": "NODE_ENV=production cd frontend/ && yarn install && yarn build && cd .."
+    },
+    "env": {
+        "SECRET_TOKEN": {
+            "description": "9&)-u05!dh)%mu3$74a2%zyl8w!3m%ifof_zk@7c@*gs9+!%jp",
+            "generator": "secret"
+        },
+        "WEB_CONCURRENCY": {
+            "description": "The number of processes to run.",
+            "value": "5"
+        }
+    },
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "standard-1x"
+        }
+    },
+    "image": "heroku/python",
+    "addons": [{
+        "plan": "heroku-postgresql",
+        "options": {
+            "version": "9.5"
+        }
+    }],
+    "buildpacks": [{
+        "url": "https://github.com/moneymeets/python-poetry-buildpack.git"
+    }],
+    "environments": {
+        "test": {
+            "scripts": {
+                "test-setup": "source ./.env && python manage.py migrate && python manage.py collectstatic --noinput",
+                "test": "python manage.py test"
+            }
+        }
+    }
+}
