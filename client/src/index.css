@@ -324,14 +324,14 @@ span {
     padding: 0.3em;
 }
 
+.container-paging-body-item:hover {
+    background-color: #f1f1f1;
+}
+
 .container-paging-body-if-item-alert {
     background-color: #b16a8c;
     padding: 0.5em 1em;
     color: #f9f9f9;
-}
-
-.container-paging-body-item:hover {
-    background-color: #f1f1f1;
 }
 
 .container-paging-controls {

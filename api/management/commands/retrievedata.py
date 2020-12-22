@@ -26,6 +26,11 @@ class Command(BaseCommand):
         except Exception:  # sorry, no time for proper exception handling :(
             return print("[ERROR! CAN'T FETCH FROM THE API]")
 
+    """
+    Parse fetched data (json->dict) and write the rows on the db.
+    More info about QueryField class in /api/utils.py
+    """
+
     def prepareAndSaveData(self):
         neo_collection = self.response["near_earth_objects"]
         for key in neo_collection:

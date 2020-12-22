@@ -170,3 +170,5 @@ REST_FRAMEWORK = {
         "api.paginations.CustomPagination",
     ],
 }
+
+CORS_ALLOW_ALL_ORIGINS = True

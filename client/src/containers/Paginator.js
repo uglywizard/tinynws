@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import List from "../components/List";
 import Loader from "../components/Loader";
 
+// Sorry for the frankestein monster style function, but is the
+// first time that I code a paginator and...
+// the next will be better:)
 class Paginator extends Component {
   state = {
     collection: [],

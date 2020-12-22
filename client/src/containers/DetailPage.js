@@ -24,7 +24,7 @@ class DetailPage extends Component {
 
   render() {
     return (
-      <div class='container'>
+      <div className='container'>
         <Card item={this.state.item}>
           <p>
             <b>Estimated diameter:</b> {this.state.item.estimated_diameter_min}{" "}
