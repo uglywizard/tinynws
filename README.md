@@ -29,6 +29,8 @@ cd ..
 
 Follows a basic list of commands to run the project in a local
 env scenario. For deploy in production use __.prod__ as argument of the DJANGO_MODULE_KEY in .env file.
+In .env there is also a NASA_API_KEY configured with the DEMO_KEY supplied by NASA API. The key simply works, 
+but for a low number of requests.
 
 __Poetry__
 ```bash
