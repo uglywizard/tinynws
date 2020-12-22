@@ -77,10 +77,14 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_crontab",
     "rest_framework",
     "corsheaders",
     "api",
 ]
+
+# https://crontab.guru/once-a-day
+CRONJOBS = [("0 0 * * *", "api.cron_retrievedata_job")]
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
