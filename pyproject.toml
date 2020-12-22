@@ -2,6 +2,7 @@
 name = "tinynws"
 version = "0.1.0"
 description = "NeoWS NASA API esotic backend"
+authors = ["Ugly Wiz <uglywizard@protonmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
