@@ -7,3 +7,10 @@ node_modules/
 .eslintcache
 staticfiles/*
 .scripts/
+cypress/fixtures/
+cypress/plugins/
+cypress/screenshots/
+cypress/support/
+yarn-error.log
+examples/
+cypress/

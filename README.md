@@ -8,6 +8,9 @@ This simple app is composed by two 'pieces' (here in the same place in one strao
 
 - (/api/) fetch data from NeoWS NASA and save it to a DB (dev: sqlite3, prod: postgresql) then serve this data trough a REST API. In this particular module lives the custom command (Api/management/commands/retrievedata.py) that retrieve the data from the NeoWS API and the specification for the execution of the cron job (api/cron.py)
 - (/neod_backend_api/): main django module (config and services).
+- The backend API is reachable by two read-only endpoints:
+  - /api/feed/: return a list of NearEarthObject from the DB.
+  - /api/detail/[id]: return a single NearEarthObject.
 
 ## Frontend
 
@@ -27,12 +30,13 @@ cd ..
 
 ### Django
 
-Follows a basic list of commands to run the project in a local
+Follow a basic list of commands to run the project in a local
 env scenario. For deploy in production use __.prod__ as argument of the DJANGO_MODULE_KEY in .env file.
-In .env there is also a NASA_API_KEY configured with the DEMO_KEY supplied by NASA API. The key simply works, 
+In .env there is also a NASA_API_KEY configured with the DEMO_KEY supplied by NASA API. The key simply works,
 but for a low number of requests.
 
 __Poetry__
+
 ```bash
 git clone {placeholder}
 cd tinynws-django-react
@@ -46,6 +50,7 @@ python manage.py runserver
 ```
 
 __Pip and virtualenv__
+
 ```bash
 virtualenv -p python venv
 source venv/bin/activate
@@ -60,7 +65,7 @@ python manage.py runserver
 
 ### Missing parts
 
-Here and there is possible to find snippet of code not so well handled in case of errors, but everything works so far and there are few test to run to check that the important things work.
+Here and there is possible to find snippet of code not so well handled in case of errors, but everything works so far (in it's singular way in some parts) and there are few test to run to check that the important things work.
 
 ## Commands
 
