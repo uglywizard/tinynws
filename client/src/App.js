@@ -5,7 +5,7 @@ import Paginator from "./containers/Paginator";
 
 function App() {
   return (
-    <div>
+    <div className='App'>
       <div>
         <h1>Tiny NeoWS</h1>
         <h2>Near Earth Objects Dashboard</h2>
