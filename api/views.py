@@ -39,19 +39,3 @@ class FrontendAppView(View):
                 "<h1>Ops</h1>",
                 status=501,
             )
-
-    """
-    Serves the compiled frontend entry point (only works if you have run `yarn
-    build`).
-
-    index_file_path = os.path.join(settings.ROOT_DIR, "frontend", "build", "index.html")
-
-    def get(self, _request, filename):
-        path = os.path.join(os.path.dirname(__file__), "staticfiles", filename)
-
-        if os.path.isfile(path):
-            with open(path, "rb") as file:
-                return HttpResponse(file.read(), content_type="application/javascript")
-        else:
-            return HttpResponseNotFound()
-    """
