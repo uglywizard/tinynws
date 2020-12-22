@@ -13,6 +13,8 @@ dj-database-url==0.5.0 \
 django-cors-headers==3.6.0; python_version >= "3.6" \
     --hash=sha256:5665fc1b1aabf1b678885cf6f8f8bd7da36ef0a978375e767d491b48d3055d8f \
     --hash=sha256:ba898dd478cd4be3a38ebc3d8729fa4d044679f8c91b2684edee41129d7e968a
+django-crontab==0.7.1 \
+    --hash=sha256:1201810a212460aaaa48eb6a766738740daf42c1a4f6aafecfb1525036929236
 django-filter==2.4.0; python_version >= "3.5" \
     --hash=sha256:84e9d5bb93f237e451db814ed422a3a625751cbc9968b484ecc74964a8696b06 \
     --hash=sha256:e00d32cebdb3d54273c48f4f878f898dced8d5dfaad009438fe61ebdf535ace1
@@ -100,4 +102,3 @@ urllib3==1.26.2; python_version >= "2.7" and python_full_version < "3.0.0" or py
 whitenoise==5.2.0; python_version >= "3.5" and python_version < "4" \
     --hash=sha256:05d00198c777028d72d8b0bbd234db605ef6d60e9410125124002518a48e515d \
     --hash=sha256:05ce0be39ad85740a78750c86a93485c40f08ad8c62a6006de0233765996e5c7
-django-crontab
