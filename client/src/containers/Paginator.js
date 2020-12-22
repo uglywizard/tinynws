@@ -25,7 +25,7 @@ class Paginator extends Component {
 
     this.setState({
       collection: data.results,
-      current_page: data.current_page,
+      current_page: data.page_number,
       next_page: data.next_page,
       prev_page: data.previous_page,
       page_count: data.page_count,
@@ -60,8 +60,20 @@ class Paginator extends Component {
       );
     });
 
+    const nextPage = () => {
+      if (this.state.current_page !== this.state.page_count)
+        return this.state.current_page + 1;
+      else return this.state.current_page;
+    };
+
+    const previousPage = () => {
+      if (this.state.current_page !== 1) return this.state.current_page - 1;
+      else return this.state.current_page;
+    };
+
     return (
       <div className='container'>
+        <blockquote>page {this.state.current_page}</blockquote>
         <ListLoading
           isLoading={this.state.is_loading}
           collection={this.state.collection}
@@ -69,7 +81,7 @@ class Paginator extends Component {
         <div className='container-paging-controls'>
           <span
             className='container-paging-controls-arrow'
-            onClick={() => this.fetchHttpRequestPage(1)}>
+            onClick={() => this.fetchHttpRequestPage(previousPage())}>
             &laquo;
           </span>
           <span className='container-paging-controls-numbers'>
@@ -77,7 +89,7 @@ class Paginator extends Component {
           </span>
           <span
             className='container-paging-controls-arrow'
-            onClick={() => this.fetchHttpRequestPage(this.state.page_count)}>
+            onClick={() => this.fetchHttpRequestPage(nextPage())}>
             &raquo;
           </span>
         </div>
