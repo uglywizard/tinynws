@@ -16,7 +16,7 @@ This simple app is composed by two 'pieces' (here in the same place in one strao
 
 - (/client/) react app builded with create-react-app. Used in dev with webpack useful utils and in prod, in this specific case, the frontend build is served by django.
 
-## Live copy
+## Live demo
 
 TinyNWS on Heroku: <https://tinynws.herokuapp.com/>
 
@@ -24,20 +24,23 @@ TinyNWS on Heroku: <https://tinynws.herokuapp.com/>
 
 ### React
 
-In this scenario there is nothing to do with the frontend, it just works served by a view in django.
+In this scenario there is nothing much to do with the frontend, it just works served by a view in django.
 
 ```bash
 cd /client
-yarn install && yarn build # to refresh the dependecies and build
+yarn && yarn build # to refresh the dependecies and build
 cd ..
 ```
 
+However, in case of need, a live version of the app instead of the static builded
+and boring version (so much prod) is runnable by exec ```yarn start``` in client root.
+
 ### Django
 
-Follow a basic list of commands to run the project in a local
-env scenario. For deploy in production use __.prod__ as argument of the DJANGO_MODULE_KEY in .env file.
-In .env there is also a NASA_API_KEY configured with the DEMO_KEY supplied by NASA API. The key simply works,
-but for a low number of requests.
+Follow a basic list of commands to run the project in a local env scenario.
+For deploy to production make sure to set __neod_backend_api.settings.prod__ as argument of the DJANGO_MODULE_SETTINGS in .env file.
+In .env there is also a NASA_API_KEY configured with the DEMO_KEY supplied by NASA API.
+The key simply works, but for a low number of requests.
 
 __Poetry__
 
@@ -46,7 +49,8 @@ git clone https://github.com/uglywizard/tinynws.git
 cd tinynws
 poetry shell
 poetry install
-# (at this point update the .env file with the desired env choice at the DJANGO_MODULE_SETTINGS key and fill the other with all the necessary data, like SECRET_KEY)
+# (at this point update the .env file with the desired env choice at the DJANGO_MODULE_SETTINGS
+# key and fill the other with all the necessary data, like SECRET_KEY)
 source .env
 python manage.py migrate
 python manage.py retrievedata
@@ -69,14 +73,14 @@ python manage.py runserver
 
 ### Missing parts
 
-Here and there is possible to find snippet of code not so well handled in case of errors, but everything works so far (in it's singular way in some parts) and there are few test to run to check that the important things work.
+Here and there is possible to find snippet of code not so well handled in case of errors, but everything works so far (in a very singular way in some parts) and there are few test to run to check that the important things work.
 
 ## Commands
 
 - To generate a new secret key in fancy cmd style: ```python manage.py shell -c 'from django.core.management import utils; print(utils.get_random_secret_key())'```
 - The custom command is callable as: ```'python manage.py retrievedata'```
 - To activate the cron job on the custom command: ```python manage.py crontab add```
-- To create a fresh build of the react app: ```cd ./client && yarn build```
+- To create a fresh build of the react app: ```cd ./client && yarn && yarn build```
 
 ## Testing
 

@@ -8,10 +8,7 @@
     "license": "",
     "private": true,
     "scripts": {
-        "heroku-prebuild": "cd client/ && yarn && yarn build:prod && cd ..",
-        "start": "serve -s build",
-        "test": "react-scripts test --env=jsdom",
-        "eject": "react-scripts eject"
+        "heroku-prebuild": "cd client/ && yarn && yarn build:prod && cd .."
     },
     "cacheDirectories": [
         "client/node_modules"

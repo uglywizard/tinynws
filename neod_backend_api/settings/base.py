@@ -17,8 +17,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-SETTINGS_DIR = os.path.dirname(os.path.abspath(__file__))
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -29,8 +27,6 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 DEBUG = False
 
 # Application definition
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "https://tinynws.herokuapp.com"]
-
 DATABASES = {"default": {}}
 
 LOGGING = {

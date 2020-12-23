@@ -41,26 +41,29 @@
 <ul>
 <li>(/client/) react app builded with create-react-app. Used in dev with webpack useful utils and in prod, in this specific case, the frontend build is served by django.</li>
 </ul>
-<h2 id="live-copy">Live copy</h2>
+<h2 id="live-demo">Live demo</h2>
 <p>TinyNWS on Heroku: <a href="https://tinynws.herokuapp.com/">https://tinynws.herokuapp.com/</a></p>
 <h2 id="configuration">Configuration</h2>
 <h3 id="react">React</h3>
-<p>In this scenario there is nothing to do with the frontend, it just works served by a view in django.</p>
+<p>In this scenario there is nothing much to do with the frontend, it just works served by a view in django.</p>
 <pre><code class="language-bash"><div><span class="hljs-built_in">cd</span> /client
-yarn install &amp;&amp; yarn build <span class="hljs-comment"># to refresh the dependecies and build</span>
+yarn &amp;&amp; yarn build <span class="hljs-comment"># to refresh the dependecies and build</span>
 <span class="hljs-built_in">cd</span> ..
 </div></code></pre>
+<p>However, in case of need, a live version of the app instead of the static builded
+and boring version (so much prod) is runnable by exec <code>yarn start</code> in client root.</p>
 <h3 id="django">Django</h3>
-<p>Follow a basic list of commands to run the project in a local
-env scenario. For deploy in production use <strong>.prod</strong> as argument of the DJANGO_MODULE_KEY in .env file.
-In .env there is also a NASA_API_KEY configured with the DEMO_KEY supplied by NASA API. The key simply works,
-but for a low number of requests.</p>
+<p>Follow a basic list of commands to run the project in a local env scenario.
+For deploy to production make sure to set <strong>neod_backend_api.settings.prod</strong> as argument of the DJANGO_MODULE_SETTINGS in .env file.
+In .env there is also a NASA_API_KEY configured with the DEMO_KEY supplied by NASA API.
+The key simply works, but for a low number of requests.</p>
 <p><strong>Poetry</strong></p>
 <pre><code class="language-bash"><div>git <span class="hljs-built_in">clone</span> https://github.com/uglywizard/tinynws.git
 <span class="hljs-built_in">cd</span> tinynws
 poetry shell
 poetry install
-<span class="hljs-comment"># (at this point update the .env file with the desired env choice at the DJANGO_MODULE_SETTINGS key and fill the other with all the necessary data, like SECRET_KEY)</span>
+<span class="hljs-comment"># (at this point update the .env file with the desired env choice at the DJANGO_MODULE_SETTINGS</span>
+<span class="hljs-comment"># key and fill the other with all the necessary data, like SECRET_KEY)</span>
 <span class="hljs-built_in">source</span> .env
 python manage.py migrate
 python manage.py retrievedata
@@ -78,13 +81,13 @@ python manage.py retrievedata
 python manage.py runserver
 </div></code></pre>
 <h3 id="missing-parts">Missing parts</h3>
-<p>Here and there is possible to find snippet of code not so well handled in case of errors, but everything works so far (in it's singular way in some parts) and there are few test to run to check that the important things work.</p>
+<p>Here and there is possible to find snippet of code not so well handled in case of errors, but everything works so far (in a very singular way in some parts) and there are few test to run to check that the important things work.</p>
 <h2 id="commands">Commands</h2>
 <ul>
 <li>To generate a new secret key in fancy cmd style: <code>python manage.py shell -c 'from django.core.management import utils; print(utils.get_random_secret_key())'</code></li>
 <li>The custom command is callable as: <code>'python manage.py retrievedata'</code></li>
 <li>To activate the cron job on the custom command: <code>python manage.py crontab add</code></li>
-<li>To create a fresh build of the react app: <code>cd ./client &amp;&amp; yarn build</code></li>
+<li>To create a fresh build of the react app: <code>cd ./client &amp;&amp; yarn &amp;&amp; yarn build</code></li>
 </ul>
 <h2 id="testing">Testing</h2>
 <p>I've learned a tough lesson about tests: it's so awesome all the prior work necessary to write down code and efficient tests, but it's also known that doing interesting things makes time pass so much fast. :°(</p>

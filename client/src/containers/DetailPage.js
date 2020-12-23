@@ -28,7 +28,7 @@ class DetailPage extends Component {
         <Card item={this.state.item}>
           <p>
             <b>Estimated diameter:</b> {this.state.item.estimated_diameter_min}{" "}
-            - {this.state.item.estimated_diameter_max}{" "}
+            km - {this.state.item.estimated_diameter_max} km
           </p>
           <p>
             <b>Relative velocity:</b> {this.state.item.relative_velocity} km/h
