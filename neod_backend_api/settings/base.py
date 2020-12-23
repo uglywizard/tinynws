@@ -29,7 +29,7 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 DEBUG = False
 
 # Application definition
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "https://tinynws.herokuapp.com"]
 
 DATABASES = {"default": {}}
 
