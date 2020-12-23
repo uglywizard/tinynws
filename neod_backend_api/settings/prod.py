@@ -17,4 +17,7 @@ SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SECURE = False
 SECURE_HSTS_INCLUDE_SUBDOMAINS = False
 
+CORS_ORIGIN_WHITELIST = ["https://*"]
+CORS_ORIGIN_ALLOW_ALL = True
+
 django_heroku.settings(locals(), logging=False)

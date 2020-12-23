@@ -5,8 +5,7 @@
     "website": "https://tinynws.herokuapp.com",
     "success_url": "/",
     "scripts": {
-        "postdeploy": "python manage.py migrate",
-        "heroku-prebuild": "NODE_ENV=production cd frontend/ && yarn install && yarn build && cd .."
+        "postdeploy": "python manage.py migrate"
     },
     "env": {
         "SECRET_TOKEN": {
@@ -30,9 +29,6 @@
         "options": {
             "version": "9.5"
         }
-    }],
-    "buildpacks": [{
-        "url": "https://github.com/moneymeets/python-poetry-buildpack.git"
     }],
     "environments": {
         "test": {

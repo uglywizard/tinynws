@@ -17,6 +17,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+SETTINGS_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -83,9 +85,6 @@ INSTALLED_APPS = [
     "corsheaders",
     "api",
 ]
-
-# https://crontab.guru/once-a-day
-CRONJOBS = [("0 0 * * *", "api.cron_retrievedata_job")]
 
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
@@ -172,4 +171,5 @@ REST_FRAMEWORK = {
     ],
 }
 
-CORS_ALLOW_ALL_ORIGINS = True
+# https://crontab.guru/once-a-day
+CRONJOBS = [("0 0 * * *", "api.cron_retrievedata_job")]
