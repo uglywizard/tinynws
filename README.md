@@ -1,6 +1,6 @@
 # Tiny NeoWS
 
-'Know urgent facts about things that happen not so far (but in reality so so so far) from the earth!'
+'Know urgent facts about things that happen not so far (but so so so far) from all of us!'
 
 This simple app is composed by two 'pieces' (here in the same place in one straordinary and unique solution, but it's possible to deploy two different apps configurating the right urls in settings, envs and /api/views).
 
