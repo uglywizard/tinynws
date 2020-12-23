@@ -33,6 +33,7 @@
     "environments": {
         "test": {
             "scripts": {
+                "manage-static-file": "cd ./client && yarn && yarn build:prod && cd ..",
                 "test-setup": "source ./.env && python manage.py migrate && python manage.py collectstatic --noinput",
                 "test": "python manage.py test"
             }
