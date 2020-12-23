@@ -6,7 +6,7 @@ This simple app is composed by two 'pieces' (here in the same place in one strao
 
 ## Backend
 
-- (/api/) fetch data from NeoWS NASA and save it to a DB (dev: sqlite3, prod: postgresql) then serve this data trough a REST API. In this particular module lives the custom command (Api/management/commands/retrievedata.py) that retrieve the data from the NeoWS API and the specification for the execution of the cron job (api/cron.py)
+- (/api/) fetch data from NeoWS NASA API and save it to a DB (dev: sqlite3, prod: postgresql) then serves this data trough two REST API endpoints. In this particular module lives the custom command (api/management/commands/retrievedata.py) that make the request to NeoWS API (parse and save to DB) and the specification for the execution of the cron job (api/cron.py)
 - (/neod_backend_api/): main django module (config and services).
 - The backend API is reachable by two read-only endpoints:
   - /api/feed/: return a list of NearEarthObject from the DB.
@@ -73,7 +73,7 @@ python manage.py runserver
 
 ### Missing parts
 
-Here and there is possible to find snippet of code not so well handled in case of errors, but everything works so far (in a very singular way in some parts) and there are few test to run to check that the important things work.
+Here and there is possible to find snippets of code not so clean and not so well handled in case of errors, but everything works so far (in a very singular way in some parts) and there are few test to run to check that the important things work.
 
 ## Commands
 
