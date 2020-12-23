@@ -56,8 +56,8 @@ env scenario. For deploy in production use <strong>.prod</strong> as argument of
 In .env there is also a NASA_API_KEY configured with the DEMO_KEY supplied by NASA API. The key simply works,
 but for a low number of requests.</p>
 <p><strong>Poetry</strong></p>
-<pre><code class="language-bash"><div>git <span class="hljs-built_in">clone</span> {placeholder}
-<span class="hljs-built_in">cd</span> tinynws-django-react
+<pre><code class="language-bash"><div>git <span class="hljs-built_in">clone</span> https://github.com/uglywizard/tinynws.git
+<span class="hljs-built_in">cd</span> tinynws
 poetry shell
 poetry install
 <span class="hljs-comment"># (at this point update the .env file with the desired env choice at the DJANGO_MODULE_SETTINGS key and fill the other with all the necessary data, like SECRET_KEY)</span>
@@ -69,8 +69,8 @@ python manage.py runserver
 <p><strong>Pip and virtualenv</strong></p>
 <pre><code class="language-bash"><div>virtualenv -p python venv
 <span class="hljs-built_in">source</span> venv/bin/activate
-git <span class="hljs-built_in">clone</span> {placeholder}
-<span class="hljs-built_in">cd</span> tinynws-django-react
+git <span class="hljs-built_in">clone</span> [{placeholder}](https://github.com/uglywizard/tinynws.git)
+<span class="hljs-built_in">cd</span> tinynws
 pip install -r requirements.txt
 <span class="hljs-built_in">source</span> .env
 python manage.py migrate

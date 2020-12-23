@@ -42,8 +42,8 @@ but for a low number of requests.
 __Poetry__
 
 ```bash
-git clone {placeholder}
-cd tinynws-django-react
+git clone https://github.com/uglywizard/tinynws.git
+cd tinynws
 poetry shell
 poetry install
 # (at this point update the .env file with the desired env choice at the DJANGO_MODULE_SETTINGS key and fill the other with all the necessary data, like SECRET_KEY)
@@ -58,8 +58,8 @@ __Pip and virtualenv__
 ```bash
 virtualenv -p python venv
 source venv/bin/activate
-git clone {placeholder}
-cd tinynws-django-react
+git clone [{placeholder}](https://github.com/uglywizard/tinynws.git)
+cd tinynws
 pip install -r requirements.txt
 source .env
 python manage.py migrate
