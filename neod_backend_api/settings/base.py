@@ -27,6 +27,7 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 DEBUG = False
 
 # Application definition
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 DATABASES = {"default": {}}
 
@@ -155,7 +156,7 @@ USE_TZ = True
 
 
 REACT_APP_DIR = os.path.join(ROOT_DIR, "client/")
-STATIC_URL = os.path.join(ROOT_DIR, "/static/")
+STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(ROOT_DIR, "staticfiles")
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 STATICFILES_DIRS = [
