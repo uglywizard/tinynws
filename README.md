@@ -58,7 +58,7 @@ __Pip and virtualenv__
 ```bash
 virtualenv -p python venv
 source venv/bin/activate
-git clone [{placeholder}](https://github.com/uglywizard/tinynws.git)
+git clone https://github.com/uglywizard/tinynws.git
 cd tinynws
 pip install -r requirements.txt
 source .env
