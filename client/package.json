@@ -18,7 +18,7 @@
         "web-vitals": "^0.2.4"
     },
     "scripts": {
-        "build": "react-scripts build",
+        "heroku-prebuild": "cd client/ && yarn && yarn build:prod && cd ..",
         "build:prod": "env-cmd -f .env.prod react-scripts build",
         "start": "react-scripts start",
         "test": "react-scripts test",
