@@ -4,15 +4,17 @@ from django.core.management.base import BaseCommand
 import os
 import requests
 
+#
 
 class Command(BaseCommand):
     help = "Fetch data from NASA NeoWS API and save response to DB."
     # url in env!
     url = "https://api.nasa.gov/neo/rest/v1/feed?api_key=" + os.environ["NASA_API_KEY"]
-    req = {}
+    resp = {} # PS. Fixed after deadline. 
 
     def handle(self, *args, **kwargs):
         self.fetchData()
+        self.cleanPreTodayDateEntries() # PS. Recovered from the old corrupted WSL project, fixed after deadline.
         self.prepareAndSaveData()
         return print("[COMPLETED]")
 
@@ -26,6 +28,16 @@ class Command(BaseCommand):
         except Exception:  # sorry, no time for proper exception handling :(
             return print("[ERROR! CAN'T FETCH FROM THE API]")
 
+    """
+    Delete DB entries that match the condition 'date < fetch_day (current_date)'
+    PS. Recovered from the old corrupted WSL project, fixed after deadline.
+    """
+
+    def cleanPreTodayDateEntries(self):
+        current_date = datetime.now(tz=pytz.UTC)
+        NearEarthObject.objects.filter(close_approach_date__lt=current_date).delete()
+        print("[DEBUG: Cleaning DB from entries with dates < current_date]")
+        
     """
     Parse fetched data (json->dict) and write the rows on the db.
     More info about QueryField class in /api/utils.py
