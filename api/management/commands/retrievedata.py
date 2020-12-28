@@ -1,7 +1,10 @@
 from api.models import NearEarthObject
 from api.utils import QueryField
+from datetime import datetime
+from django.core.management import call_command
 from django.core.management.base import BaseCommand
 import os
+import pytz
 import requests
 
 #
