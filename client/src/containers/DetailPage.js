@@ -24,24 +24,24 @@ class DetailPage extends Component {
 
   render() {
     return (
-      <div className='container'>
+      <div className="container-card-detail">
         <Card item={this.state.item}>
-          <p>
+          <p name="estimated-diameter">
             <b>Estimated diameter:</b> {this.state.item.estimated_diameter_min}{" "}
             km - {this.state.item.estimated_diameter_max} km
           </p>
-          <p>
+          <p name="relative-velocity">
             <b>Relative velocity:</b> {this.state.item.relative_velocity} km/h
           </p>
-          <p>
+          <p name="url">
             <b>Url:</b>{" "}
-            <a href={this.state.item.nasa_jpl_url}>
+            <a name="nasa-api-url" href={this.state.item.nasa_jpl_url}>
               {this.state.item.nasa_jpl_url}
             </a>
           </p>
         </Card>
         <button
-          className='button-back'
+          className='back-button'
           type='button'
           variant='contained'
           color='primary'
