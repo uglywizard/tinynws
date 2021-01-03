@@ -10,7 +10,6 @@ staticfiles/*
 yarn-error.log
 examples/
 fixtures/
-integration/examples/
 plugins/
 support/
 yarn.lock

@@ -101,3 +101,11 @@ coverage run --source='.' manage.py test
 cd ./client
 yarn run test
 ```
+
+- Cypress test:
+
+```bash
+cd ./client
+yarn add cypress --dev
+yarn run cypress open ui-sample-testing
+```
