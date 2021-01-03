@@ -106,6 +106,6 @@ yarn run test
 
 ```bash
 cd ./client
-yarn add cypress --dev
+yarn start
 yarn run cypress open ui-sample-testing
 ```

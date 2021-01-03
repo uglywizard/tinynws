@@ -9,7 +9,4 @@ staticfiles/*
 .scripts/
 yarn-error.log
 examples/
-fixtures/
-plugins/
-support/
 yarn.lock
